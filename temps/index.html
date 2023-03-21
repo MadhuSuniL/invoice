@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Invoice</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    input{
+        border: 1px solid black;
+        padding: 20px;
+        border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+    <button onclick="window.location.reload()" class="bg-blue-500 p-2 rounded-lg float-right text-white border-2 border-black hover:scale-110 m-3">Refresh </button>
+    <button onclick="window.location.href = '/invoice/post_invoice'" class="bg-green-500 p-2 rounded-lg float-right text-white border-2 border-black animate-bounce hover:scale-110 m-3">Create </button><br>
+    <div class="overflow-x-scroll bg-gold-400 w-full max-w-[94%] mt-20 mx-auto">
+        <h1 class="text-xl text-center font-bold">Invoice Details</h1><br>
+        <table class="table table-hover">
+        <thead class="text-light bg-dark">
+            <tr>
+              <th scope="col">Invoice No</th>
+              <th scope="col">Customer Name</th>
+              <th scope="col">Date</th>
+              <th scope="col">Desription</th>
+              <th scope="col">Quantity</th>
+              <th scope="col">Unit Price</th>
+              <th scope="col">Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for obj in data %}
+            <tr>
+                <td>{{obj.invoice_no}}</td>
+                <td>{{obj.customer_name}}</td>
+                <td>{{obj.date}}</td>
+                <td>{{obj.description}}</td>
+                <td>{{obj.quantity}}</td>
+                <td>{{obj.unit_price}}</td>
+                <td>{{obj.price}}</td>
+              </tr>
+            {% endfor %}
+        </tbody>
+        </table>
+        
+    </div>
+
+                
+    </div>
+        
+<script>
+
+
+</script>
+
+</body>
+</html>
