@@ -1,7 +1,7 @@
 <h1>Invoice</h1>
 
 <h2>APIs</h2>
-get api end point - <h3 style={'color':cyan}>invoice/get_invoice</h3>
+get api end point - <code><h3 style={'color':cyan}>invoice/get_invoice</h3></code>
 post api end point - <h3>invoice/post_invoice</h3>
 
 
